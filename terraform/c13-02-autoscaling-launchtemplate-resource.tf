@@ -1,5 +1,5 @@
 resource "aws_launch_template" "first_launch_template" {
-  name                   = var.launch_template_name
+  name                   = "${local.name}-${var.launch_template_name}"
   image_id               = data.aws_ami.amzlinux2
   instance_type          = var.instance_type
   vpc_security_group_ids = [module.private_sg.security_group_id]

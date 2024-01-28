@@ -1,5 +1,5 @@
 resource "aws_autoscaling_group" "first_autoscaling_group" {
-  name_prefix               = var.asg_name_prifex
+  name_prefix               = "${local.name}-${var.asg_name_prifex}"
   desired_capacity          = var.asg_desired_capacity
   max_size                  = var.asg_max_size
   min_size                  = var.asg_min_size
