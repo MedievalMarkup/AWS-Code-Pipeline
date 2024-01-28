@@ -2,7 +2,7 @@ module "private_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.1.0"
 
-  name = "private-sg"
+  name = "${local.name}-private-sg"
   description = "security group with http & ssh port open for entire vpc block"
 
   vpc_id = module.vpc.vpc_id

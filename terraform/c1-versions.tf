@@ -12,6 +12,11 @@ terraform {
       profile = "default"
     }
   }
+
+  # backend
+  backend "s3" {
+    
+  }
 }
 
 # Provider Block

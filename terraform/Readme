@@ -1,0 +1,13 @@
+
+
+Dev - C1 to C13 - Approximate 30 files
+QA - C1 to C13 - Approximate 30 files
+Stg - C1 to C13 - Approximate 30 files
+Prd - C1 to C13 - Approximate 30 files
+DR - C1 to C13 - Approximate 30 files
+Close to 150 files you need to manage changes.
+For critical projects which you want to isolate as above, Terraform also recommends this approach but its all case to case basis on the environment we have built, skill level and organization level standards.
+
+I don't want to auto load so didn't create auto.tfvars, 
+
+terraform apply -input=false -var-file=dev.tfvars -auto-approve  

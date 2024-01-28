@@ -2,7 +2,7 @@ module "public_bastion_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.1.0"
 
-  name = "public-bastion-sg"
+  name = "${local.name}-public-bastion-sg"
   description = "security group with ssh port open"
 
   vpc_id = module.vpc.vpc_id

@@ -1,3 +1,8 @@
+# EC2
+instance_type = "t2.micro"
+instance_keypair = "terraform-key"
+private_instance_count = 2
+
 # VPC Variables
 vpc_name = "myvpc"
 vpc_cidr_block = "10.0.0.0/16"
@@ -9,3 +14,6 @@ vpc_create_database_subnet_group = true
 vpc_create_database_subnet_route_table = true   
 vpc_enable_nat_gateway = true  
 vpc_single_nat_gateway = true
+
+#DNS
+dns_name = "test.app.com"

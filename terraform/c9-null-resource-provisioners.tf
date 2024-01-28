@@ -19,13 +19,15 @@ resource "null_resource" "configure-EC2-Machine" {
 		]
 	}
 
-	provisioner "local-exec" {
-		command     = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-ec2.txt"
-		working_dir = "local-exec-out-files/"
-		on_failure  = continue
-		#destroy time provisioners
-		# when        = destroy 
-	}
+	# Not applicable for code pipeline, since, it will not interact with the desktop
+
+	# provisioner "local-exec" {
+	# 	command     = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-ec2.txt"
+	# 	working_dir = "local-exec-out-files/"
+	# 	on_failure  = continue
+	# 	#destroy time provisioners
+	# 	# when        = destroy 
+	# }
 
 }
 

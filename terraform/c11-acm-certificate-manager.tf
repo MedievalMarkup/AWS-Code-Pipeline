@@ -12,7 +12,8 @@ module "acm" {
   validation_method = "DNS"
 
   subject_alternative_names = [
-    "*.${data.aws_route53_zone.mydomain.name}",
+    # "*.${data.aws_route53_zone.mydomain.name}",
+    var.dns_name
   ]
 
   wait_for_validation = true
